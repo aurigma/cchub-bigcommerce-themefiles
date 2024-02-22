@@ -1,0 +1,16 @@
+{
+  "name": "customers-canvas-bigcommerce-themefiles",
+  "version": "1.0.0",
+  "license": "UNLICENSED",
+  "scripts": {
+    "update-theme": "npx gulp updateBigCommerceTheme"
+  },
+  "author": "dskripchenko",
+  "devDependencies": {
+    "@types/gulp": "^4.0.10",
+    "gulp": "^4.0.2",
+    "gulp-mustache": "^5.0.0",
+    "gulp-rename": "^2.0.0",
+    "ts-node": "^10.9.1"
+  }
+}

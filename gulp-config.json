@@ -1,0 +1,15 @@
+{
+    "themeFileLocation": "./mustache/**/*.html",
+    "themeArtifactFolder": "theme",
+    "mustache": {
+        "view": {
+            "TenantId": 0,
+            "StorefrontId": 0,
+            "CCHubBaseUrl": "",
+            "BigCommerceAdapterBaseUrl": ""
+        },
+        "options": {
+            "tags": ["{|", "|}"]
+        }
+    }
+}

@@ -1,0 +1,17 @@
+<a href="" id="returnToEdit-Link-{{id}}">
+    Edit
+</a>
+<script defer>
+    (async () => {
+    const jsContext = JSON.parse({{ jsContext }});
+    const rawProjectKey = jsContext.item.options.find(op => op.name === 'BackOffice project link')?.value;
+    if(rawProjectKey) {
+        fetch(`https://bigcommerce-adapter.azurewebsites.net/api/bigcommerce-adapter/v1/raw-projects?tenantId={| TenantId |}&storefrontId={| StorefrontId |}&key=${rawProjectKey}`)
+        .then(response => response.json())
+        .then(rawProject => {
+            var returnToEdit = document.getElementById(`returnToEdit-Link-${jsContext.item.id}`);
+            returnToEdit.setAttribute("href", `{{url}}?stateId=${rawProject.items[0].designIds[0]}&snapshot=${rawProject.items[0].hidden.snapshot}&cartItemId={{id}}`);
+        });
+    }
+    })();
+</script>
